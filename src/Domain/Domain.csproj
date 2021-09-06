@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <!-- <TargetFramework>netcoreapp3.1</TargetFramework> -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fluentValidation" Version="10.3.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.12.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrossCutting\CrossCutting.csproj" />
+  </ItemGroup>
+
+</Project>

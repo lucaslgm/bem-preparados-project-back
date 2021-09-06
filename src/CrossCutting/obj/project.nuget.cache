@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "Svevu7qg7J/evuXf8EoH0aam/e+auE2x6cQJrpiNb0Jhy05iK0jB2icv1tyV9AskIK7IWRjEWOsyRhg64P2jPQ==",
+  "success": true,
+  "projectFilePath": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/CrossCutting/CrossCutting.csproj",
+  "expectedPackageFiles": [
+    "/Users/lucaslgm/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
+    "/Users/lucaslgm/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "/Users/lucaslgm/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/lucaslgm/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/3.0.0/microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "/Users/lucaslgm/.nuget/packages/microsoft.extensions.options/3.0.0/microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "/Users/lucaslgm/.nuget/packages/microsoft.extensions.primitives/3.0.0/microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "/Users/lucaslgm/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

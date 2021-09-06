@@ -1,0 +1,15 @@
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/bin/Debug/net5.0/Domain.deps.json
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/bin/Debug/net5.0/Domain.dll
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/bin/Debug/net5.0/ref/Domain.dll
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/bin/Debug/net5.0/Domain.pdb
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/bin/Debug/net5.0/CrossCutting.dll
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/bin/Debug/net5.0/CrossCutting.pdb
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/obj/Debug/net5.0/Domain.csproj.AssemblyReference.cache
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/obj/Debug/net5.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/obj/Debug/net5.0/Domain.AssemblyInfoInputs.cache
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/obj/Debug/net5.0/Domain.AssemblyInfo.cs
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/obj/Debug/net5.0/Domain.csproj.CopyComplete
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/obj/Debug/net5.0/Domain.dll
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/obj/Debug/net5.0/ref/Domain.dll
+/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/obj/Debug/net5.0/Domain.pdb
