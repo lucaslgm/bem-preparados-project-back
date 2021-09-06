@@ -289,11 +289,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/CrossCutting/CrossCutting.csproj",
+      "projectUniqueName": "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/CrossCutting.csproj",
       "projectName": "CrossCutting",
-      "projectPath": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/CrossCutting/CrossCutting.csproj",
+      "projectPath": "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/CrossCutting.csproj",
       "packagesPath": "/Users/lucaslgm/.nuget/packages/",
-      "outputPath": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/CrossCutting/obj/",
+      "outputPath": "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/lucaslgm/.nuget/NuGet/NuGet.Config"

@@ -10,3 +10,15 @@
 /Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/CrossCutting/obj/Debug/net5.0/CrossCutting.dll
 /Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/CrossCutting/obj/Debug/net5.0/ref/CrossCutting.dll
 /Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/CrossCutting/obj/Debug/net5.0/CrossCutting.pdb
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/bin/Debug/net5.0/CrossCutting.deps.json
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/bin/Debug/net5.0/CrossCutting.dll
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/bin/Debug/net5.0/ref/CrossCutting.dll
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/bin/Debug/net5.0/CrossCutting.pdb
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/obj/Debug/net5.0/CrossCutting.csproj.AssemblyReference.cache
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/obj/Debug/net5.0/CrossCutting.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/obj/Debug/net5.0/CrossCutting.AssemblyInfoInputs.cache
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/obj/Debug/net5.0/CrossCutting.AssemblyInfo.cs
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/obj/Debug/net5.0/CrossCutting.csproj.CoreCompileInputs.cache
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/obj/Debug/net5.0/CrossCutting.dll
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/obj/Debug/net5.0/ref/CrossCutting.dll
+/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/obj/Debug/net5.0/CrossCutting.pdb

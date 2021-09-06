@@ -66,5 +66,8 @@ namespace Application.Models
 
     [Required(ErrorMessage = "Usuario é um campo obrigatório")]
     public string Usuario { get; set; }
+
+    [Required(ErrorMessage = "Situacao é um campo obrigatório")]
+    public string Situacao { get; set; }
   }
 }

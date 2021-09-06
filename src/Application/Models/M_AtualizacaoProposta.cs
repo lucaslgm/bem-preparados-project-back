@@ -21,5 +21,14 @@ namespace Application.Models
 
     [Required(ErrorMessage = "Usuario é um campo obrigatório")]
     public string Usuario { get; set; }
+
+    [Required(ErrorMessage = "CPF é um campo obrigatório")]
+    [MinLength(11, ErrorMessage = "CPF deve ter no mínimo {1} caracteres.")]
+    [MaxLength(11, ErrorMessage = "CPF deve ter no máximo {1} caracteres.")]
+    [StringLength(11, ErrorMessage = "CPF deve ter no máximo {1} caracteres.")]
+    public string Cpf { get; set; }
+
+    [Required(ErrorMessage = "Situacao é um campo obrigatório")]
+    public string Situacao { get; set; }
   }
 }

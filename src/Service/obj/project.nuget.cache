@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zfZqQkN18fNXAdf6I/yU92rV5AoYXeO/ErnrNQGaC8Hw57ruy9a4UG7bvv7BUzKsfZdUFhrckvAf/ys7C+eGbA==",
+  "dgSpecHash": "RD/qJOfqtd78gQ4cto+YS4IZuXL0kNlZwOSxxSHnfMoyrmEsbyyz3fEgJbUxCXqX6jWxnBn6T2jzroZmqeUV9A==",
   "success": true,
-  "projectFilePath": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Service/Service.csproj",
+  "projectFilePath": "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/Service/Service.csproj",
   "expectedPackageFiles": [
     "/Users/lucaslgm/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/Users/lucaslgm/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

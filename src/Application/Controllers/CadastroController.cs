@@ -62,12 +62,12 @@ namespace Application.Controllers
     [HttpGet]
     [Authorize("Bearer")]
     [Route("/api/v1/form/get-financed-amount")]
-    public ObjectResult GetValorFinanciado([FromQuery] double vlrSolicitado, int prazo)
+    public async Task<IActionResult> GetValorFinanciado([FromQuery] double vlrSolicitado, int prazo)
     {
       double c = vlrSolicitado;
       int t = prazo;
 
-      var vlrFinanciado = _cadastroServico.CalculaValorFinanciado(c, t);
+      var vlrFinanciado = await _cadastroServico.CalculaValorFinanciado(c, t);
 
       return Ok(vlrFinanciado);
     }

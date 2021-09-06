@@ -109,7 +109,7 @@ namespace Infrastructure.Repositories
       string sqlQuery = "UPDATE [dbo].[TREINA_PROPOSTAS] SET CONVENIADA = @conveniada, " +
       "VLR_SOLICITADO = @vlr_solicitado, PRAZO = @prazo, VLR_FINANCIADO = @vlr_financiado, " +
       "USUARIO = @usuario, SITUACAO = @situacao, DT_SITUACAO = @dt_situacao, " +
-      "DATA_ATUALIZACAO = @data_atualizacao WHERE NUMERO_PROPOSTA = @numero_proposta;";
+      "DATA_ATUALIZACAO = @data_atualizacao WHERE PROPOSTA = @proposta;";
 
       DynamicParameters parameter = new DynamicParameters();
       parameter.Add("@proposta", obj.Proposta);

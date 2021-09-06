@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Svevu7qg7J/evuXf8EoH0aam/e+auE2x6cQJrpiNb0Jhy05iK0jB2icv1tyV9AskIK7IWRjEWOsyRhg64P2jPQ==",
+  "dgSpecHash": "5yMzj8FegfITYJJAob8IRsD4QDR48awLo+41f+klyot/gS+kmLIAoh/OtuGCGUWqKIo1UGCtIofBHUC+WVMXMg==",
   "success": true,
-  "projectFilePath": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/CrossCutting/CrossCutting.csproj",
+  "projectFilePath": "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/CrossCutting.csproj",
   "expectedPackageFiles": [
     "/Users/lucaslgm/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/Users/lucaslgm/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

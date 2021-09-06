@@ -89,7 +89,7 @@ namespace Infrastructure.Repositories
       "CIDADE = @cidade, CEP = @cep, DATA_ATUALIZACAO = @data_atualizacao WHERE cpf = @cpf;";
 
       DynamicParameters parameter = new DynamicParameters();
-      parameter.Add("@cpf", obj.Cep);
+      parameter.Add("@cpf", obj.Cpf);
       parameter.Add("@nome", obj.Nome);
       parameter.Add("@dt_nascimento", obj.Dt_nascimento);
       parameter.Add("@genero", obj.Genero);

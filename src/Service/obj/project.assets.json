@@ -5697,11 +5697,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Service/Service.csproj",
+      "projectUniqueName": "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/Service/Service.csproj",
       "projectName": "Service",
-      "projectPath": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Service/Service.csproj",
+      "projectPath": "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/Service/Service.csproj",
       "packagesPath": "/Users/lucaslgm/.nuget/packages/",
-      "outputPath": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Service/obj/",
+      "outputPath": "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/Service/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/lucaslgm/.nuget/NuGet/NuGet.Config"
@@ -5716,14 +5716,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/CrossCutting/CrossCutting.csproj": {
-              "projectPath": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/CrossCutting/CrossCutting.csproj"
+            "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/CrossCutting.csproj": {
+              "projectPath": "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/CrossCutting/CrossCutting.csproj"
             },
-            "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/Domain.csproj": {
-              "projectPath": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Domain/Domain.csproj"
+            "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/Domain/Domain.csproj": {
+              "projectPath": "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/Domain/Domain.csproj"
             },
-            "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Infrastructure/Infrastructure.csproj": {
-              "projectPath": "/Users/lucaslgm/Dev/VSCode/BemPreparados-Project/Api/src/Infrastructure/Infrastructure.csproj"
+            "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/Infrastructure/Infrastructure.csproj": {
+              "projectPath": "/Users/lucaslgm/Dev/VSCode/bem-preparados-project-back/src/Infrastructure/Infrastructure.csproj"
             }
           }
         }
