@@ -32,12 +32,6 @@ namespace Application.Controllers
         var endereco = await _viacepServico.GetEndereco(cep);
 
         return endereco == null ? NotFound() : Ok(endereco);
-
-        // if (endereco == null)
-        // {
-        //   return NotFound();
-        // }
-        // return Ok(endereco);
       }
       catch (DomainException ex)
       {

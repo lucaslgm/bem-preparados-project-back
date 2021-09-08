@@ -22,15 +22,12 @@ namespace Domain.Entities
       get { return _validade_senha; }
       set { _validade_senha = value == null ? (DateTime.UtcNow.AddMonths(3)) : value; }
     }
-
-
     public E_Usuario(String username, String password, String name)
     {
       this.Usuario = username;
       this.Senha = password;
       this.Nome = name;
       this._erros = new List<string>();
-
       Validate();
     }
 

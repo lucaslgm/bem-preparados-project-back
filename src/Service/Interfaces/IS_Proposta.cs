@@ -14,5 +14,6 @@ namespace Service.Interfaces
     Task<D_PropostaCompleta> GetPropostaCompleta(string usuario, string cpf);
     Task<D_Proposta> GetByProposta(decimal proposta);
     Task<D_Proposta> GetByCliente(string cpf);
+    Task<decimal> GetById(int id);
   }
 }

@@ -26,7 +26,7 @@ namespace Test
       _repoMock = new Mock<IR_Parametros>();
       _repoMock.Setup(r => r.GetTaxaJuros()).Returns(Task.FromResult(1.0));
 
-      _service = new S_Cadastro(null, _repoMock.Object);
+      _service = new S_Cadastro(null, _repoMock.Object, null, null, null, null);
 
       var resultado = _service.CalculaValorFinanciado(vlr, prazo);
       Assert.True(Convert.ToDecimal(resultado.Result) == esperado);

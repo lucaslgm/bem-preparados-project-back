@@ -5,6 +5,7 @@ using Application.Models;
 using Application.Utilities;
 using AutoMapper;
 using CrossCutting.Exceptions;
+using MassTransit;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -19,7 +20,6 @@ namespace Application.Controllers
   {
     private readonly IS_Cliente _clienteServico;
     private readonly IS_Proposta _propostaServico;
-
     private readonly IS_Cadastro _cadastroServico;
     private readonly IMapper _mapper;
 
@@ -79,27 +79,23 @@ namespace Application.Controllers
     {
       try
       {
-        var mCliente = _mapper.Map<M_InsercaoCliente>(model);
-        var mProposta = _mapper.Map<M_InsercaoProposta>(model);
-        var cliente = _mapper.Map<D_Cliente>(mCliente);
-        var proposta = _mapper.Map<D_Proposta>(mProposta);
+        var dto = _mapper.Map<D_InsercaoCadastro>(model);
+        var cadastroInserido = await _cadastroServico.Insert(dto);
 
-        var clienteCriado = await _clienteServico.Insert(cliente);
-
-        if (cliente != null)
+        return Ok(new M_Resultado
         {
-          var propostaCriada = await _propostaServico.Insert(proposta);
-          return Ok(new { cliente, proposta });
-        }
-        return BadRequest(ModelStateDictionary.DefaultMaxAllowedErrors);
+          Message = "Cadastro inserido com sucesso!",
+          Success = true,
+          Data = cadastroInserido
+        });
       }
       catch (DomainException ex)
       {
         return BadRequest(Responses.DomainErrorMessage(ex.Message, ex.Errors));
       }
-      catch (Exception)
+      catch (Exception e)
       {
-        return StatusCode(500, Responses.ApplicationErrorMessage());
+        return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
       }
     }
 
@@ -110,28 +106,24 @@ namespace Application.Controllers
     {
       try
       {
-        var mCliente = _mapper.Map<M_AtualizacaoCliente>(model);
-        var mProposta = _mapper.Map<M_AtualizacaoProposta>(model);
-        var cliente = _mapper.Map<D_Cliente>(mCliente);
-        var proposta = _mapper.Map<D_Proposta>(mProposta);
+        var dto = _mapper.Map<D_AtualizacaoCadastro>(model);
 
-        var clienteAtualizado = await _clienteServico.Update(cliente);
-        var propostaAtualizada = await _propostaServico.Update(proposta);
+        var cadastroAtualizado = await _cadastroServico.Update(dto);
 
-        if (clienteAtualizado == 1 && propostaAtualizada == 1)
+        return Ok(new M_Resultado
         {
-          return Ok();
-        }
-
-        return BadRequest();
+          Message = "Cadastro atualizado com sucesso!",
+          Success = true,
+          Data = cadastroAtualizado
+        });
       }
       catch (DomainException ex)
       {
         return BadRequest(Responses.DomainErrorMessage(ex.Message, ex.Errors));
       }
-      catch (Exception)
+      catch (Exception e)
       {
-        return StatusCode(500, Responses.ApplicationErrorMessage());
+        return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
       }
     }
   }

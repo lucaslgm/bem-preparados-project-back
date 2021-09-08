@@ -9,5 +9,6 @@ namespace Infrastructure.Interfaces
     Task<E_Proposta> GetByProposta(decimal proposta);
     Task<E_Proposta> GetByCliente(string cpf);
     Task<IEnumerable<E_Proposta>> GetByUsuario(string usuario);
+    Task<decimal> GetNumeroProposta(int id);
   }
 }

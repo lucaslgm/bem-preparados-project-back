@@ -16,6 +16,6 @@ namespace Service.Dtos
     public string Cidade { get; set; }
     public string Cep { get; set; }
     public DateTime Data_atualizacao { get; set; }
-    public String Usuario_atualizacao { get; set; }
+    public string Usuario_atualizacao { get; set; }
   }
 }

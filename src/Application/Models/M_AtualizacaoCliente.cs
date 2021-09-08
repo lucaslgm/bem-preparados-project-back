@@ -2,7 +2,6 @@ using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Application.Models
-// namespace Domain.Models
 {
   public class M_AtualizacaoCliente
   {

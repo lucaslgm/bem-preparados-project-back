@@ -34,11 +34,21 @@ namespace Services
       var dtoProposta = _mapper.Map<D_Proposta>(entidade);
       return dtoProposta;
     }
+    public async Task<decimal> GetById(int id)
+    {
+      var proposta = await _propostaRepositorio.GetNumeroProposta(id);
+      return proposta;
+    }
 
     public async Task<D_Proposta> GetByProposta(decimal proposta)
     {
       var entidade = await _propostaRepositorio.GetByProposta(proposta);
       return _mapper.Map<D_Proposta>(entidade);
+    }
+    public async Task<decimal> GetNumeroProposta(int id)
+    {
+      var numProposta = await _propostaRepositorio.GetNumeroProposta(id);
+      return numProposta;
     }
 
     public async Task<IEnumerable<D_Proposta>> GetByUsuario(string usuario)

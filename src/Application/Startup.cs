@@ -8,6 +8,7 @@ using Domain.Tokens;
 using Infrastructure.Context;
 using Infrastructure.Interfaces;
 using Infrastructure.Repositories;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -196,6 +197,7 @@ namespace Application
       services.AddScoped<IR_PropostaCompleta, R_PropostaCompleta>();
       services.AddScoped<IR_Cliente, R_Cliente>();
       services.AddScoped<IR_Parametros, R_Parametros>();
+      services.AddScoped<IR_Cadastro, R_Cadastro>();
 
       services.AddScoped<ITokenGenerator, TokenGenerator>();
       // services.AddDbContext<ContextApi>(options => options.UseSqlServer(Configuration["ConnectionStrings:Default"]), ServiceLifetime.Transient);
@@ -208,10 +210,15 @@ namespace Application
         cfg.CreateMap<E_Login, D_Login>().ReverseMap();
         cfg.CreateMap<E_Situacao, D_Situacao>().ReverseMap();
         cfg.CreateMap<E_Conveniada, D_Conveniada>().ReverseMap();
+        cfg.CreateMap<E_Cliente, D_Cliente>().ReverseMap();
         cfg.CreateMap<E_LimitesIdade, D_LimitesIdade>().ReverseMap();
         cfg.CreateMap<E_Proposta, D_Proposta>().ReverseMap();
         cfg.CreateMap<E_PropostaCompleta, D_PropostaCompleta>().ReverseMap();
-        cfg.CreateMap<E_Cliente, D_Cliente>().ReverseMap();
+        cfg.CreateMap<E_ClienteProposta, D_InsercaoCadastro>().ReverseMap();
+        cfg.CreateMap<E_ClienteProposta, D_AtualizacaoCadastro>().ReverseMap();
+
+        cfg.CreateMap<D_AtualizacaoCadastro, D_PropostaFila>().ReverseMap();
+        cfg.CreateMap<D_InsercaoCadastro, D_PropostaFila>().ReverseMap();
 
         cfg.CreateMap<M_InsercaoUsuario, D_Usuario>().ReverseMap();
         cfg.CreateMap<M_AtualizacaoUsuario, D_Usuario>().ReverseMap();
@@ -223,13 +230,34 @@ namespace Application
         cfg.CreateMap<M_AtualizacaoProposta, D_Proposta>().ReverseMap();
         cfg.CreateMap<M_InsercaoCliente, D_Cliente>().ReverseMap();
         cfg.CreateMap<M_AtualizacaoCliente, D_Cliente>().ReverseMap();
-        cfg.CreateMap<M_InsercaoCadastro, M_InsercaoCliente>().ReverseMap();
-        cfg.CreateMap<M_InsercaoCadastro, M_InsercaoProposta>().ReverseMap();
-        cfg.CreateMap<M_AtualizacaoCadastro, M_AtualizacaoProposta>().ReverseMap();
-        cfg.CreateMap<M_AtualizacaoCadastro, M_AtualizacaoCliente>().ReverseMap();
+        cfg.CreateMap<M_PropostaFila, D_PropostaFila>().ReverseMap();
+        cfg.CreateMap<M_InsercaoCadastro, D_InsercaoCadastro>().ReverseMap();
+        cfg.CreateMap<M_AtualizacaoCadastro, D_AtualizacaoCadastro>().ReverseMap();
+        cfg.CreateMap<M_InsercaoCadastro, M_PropostaFila>().ReverseMap();
+        cfg.CreateMap<M_AtualizacaoCadastro, M_PropostaFila>().ReverseMap();
+
+        // cfg.CreateMap<M_InsercaoCadastro, M_InsercaoCliente>().ReverseMap();
+        // cfg.CreateMap<M_InsercaoCadastro, M_InsercaoProposta>().ReverseMap();
+        // cfg.CreateMap<M_AtualizacaoCadastro, M_AtualizacaoProposta>().ReverseMap();
+        // cfg.CreateMap<M_AtualizacaoCadastro, M_AtualizacaoCliente>().ReverseMap();
       });
 
       services.AddSingleton(autoMapperConfig.CreateMapper());
+      #endregion
+
+      #region MassTransit
+      // services.AddTransient<ServicoBuscarImagem>();
+      services.AddMassTransit(x =>
+      {
+        x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(config =>
+        {
+          config.Host(new Uri($"rabbitmq://localhost"), host =>
+          {
+            host.Username("guest");
+            host.Password("guest");
+          });
+        }));
+      });
       #endregion
     }
 

@@ -140,6 +140,31 @@ namespace Application.Controllers
         return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
       }
     }
+    [HttpGet]
+    // [Authorize("Bearer")]
+    [Route("/api/v1/proposal/get-by-id/{id}")]
+    public async Task<IActionResult> GetByID(int id)
+    {
+      try
+      {
+        var proposta = await _propostaServico.GetById(id);
+
+        return Ok(new M_Resultado
+        {
+          Message = "Proposta encontrada com sucesso!",
+          Success = true,
+          Data = proposta
+        });
+      }
+      catch (DomainException e)
+      {
+        return BadRequest(Responses.DomainErrorMessage(e.Message));
+      }
+      catch (Exception e)
+      {
+        return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
+      }
+    }
 
     [HttpGet]
     [Authorize("Bearer")]

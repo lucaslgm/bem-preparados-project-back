@@ -135,5 +135,19 @@ namespace Infrastructure.Repositories
     {
       throw new System.NotImplementedException();
     }
+
+    public async Task<decimal> GetNumeroProposta(int id)
+    {
+      string sqlQuery = "SELECT PROPOSTA FROM [dbo].[TREINA_PROPOSTAS] WHERE id_treina_proposta = @Id;";
+
+      E_Proposta ret;
+
+      using (var connection = new SqlConnection(base.GetConnection()))
+      {
+        ret = await connection.QuerySingleOrDefaultAsync<E_Proposta>(sqlQuery, new { Id = id });
+      }
+
+      return ret.Proposta;
+    }
   }
 }

@@ -13,8 +13,6 @@ namespace Services
   {
     private readonly IMapper _mapper;
     private readonly IR_Usuario _usuarioRepositorio;
-
-    // public UserService(IMapper mapper, IUserRepository userRepository)
     public S_Usuario(IMapper mapper, IR_Usuario usuarioRepositorio)
     {
       _mapper = mapper;
@@ -32,7 +30,6 @@ namespace Services
 
     public async Task<IEnumerable<D_Usuario>> Get()
     {
-      // var listEntity = await _userRepository.Get();
       var listEntity = await _usuarioRepositorio.Get();
       return _mapper.Map<IEnumerable<D_Usuario>>(listEntity);
 
@@ -46,7 +43,6 @@ namespace Services
 
     public async Task<D_Usuario> Insert(D_Usuario user)
     {
-      // var userExists = await _userRepository.GetByUsername(user.Username);
       var userExists = await _usuarioRepositorio.GetByUsername(user.Usuario);
       if (userExists != null)
       {
