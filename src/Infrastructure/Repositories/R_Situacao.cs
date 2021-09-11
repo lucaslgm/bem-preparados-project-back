@@ -36,7 +36,7 @@ namespace Infrastructure.Repositories
     }
     public async Task<E_Situacao> Get(string situacao)
     {
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_SITUACAO] WHERE SITUACAO = @situacao;";
+      string sqlQuery = "SELECT situacao, descricao FROM [dbo].[TREINA_SITUACAO] WHERE SITUACAO = @situacao;";
 
       E_Situacao ret;
 
@@ -51,7 +51,7 @@ namespace Infrastructure.Repositories
     }
     public async Task<IEnumerable<E_Situacao>> Get()
     {
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_SITUACAO]";
+      string sqlQuery = "SELECT situacao, descricao FROM [dbo].[TREINA_SITUACAO]";
 
       IEnumerable<E_Situacao> ret;
 
@@ -63,7 +63,7 @@ namespace Infrastructure.Repositories
     }
     public async Task<E_Situacao> GetByState(string situacao)
     {
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_SITUACAO] WHERE situacao= @situacao";
+      string sqlQuery = "SELECT situacao, descricao FROM [dbo].[TREINA_SITUACAO] WHERE situacao= @situacao";
 
       E_Situacao ret;
 
@@ -76,7 +76,6 @@ namespace Infrastructure.Repositories
       }
       return ret;
     }
-
     public Task<int> Update(E_Situacao obj)
     {
       throw new System.NotImplementedException();

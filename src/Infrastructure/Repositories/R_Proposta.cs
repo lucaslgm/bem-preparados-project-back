@@ -46,7 +46,9 @@ namespace Infrastructure.Repositories
 
     public async Task<IEnumerable<E_Proposta>> Get()
     {
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_PROPOSTAS]";
+      // string sqlQuery = "SELECT * FROM [dbo].[TREINA_PROPOSTAS]";
+      string sqlQuery = "SELECT id_treina_proposta, proposta, cpf, conveniada, vlr_solicitado, prazo, vlr_financiado, " +
+                        "situacao, observacao, dt_situacao, usuario FROM [dbo].[TREINA_PROPOSTAS]";
 
       IEnumerable<E_Proposta> retorno;
 
@@ -59,7 +61,9 @@ namespace Infrastructure.Repositories
 
     public async Task<E_Proposta> GetByProposta(decimal proposta)
     {
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_PROPOSTAS] WHERE proposta= @proposta";
+      // string sqlQuery = "SELECT * FROM [dbo].[TREINA_PROPOSTAS] WHERE proposta= @proposta";
+      string sqlQuery = "SELECT id_treina_proposta, proposta, cpf, conveniada, vlr_solicitado, prazo, vlr_financiado, " +
+                        "situacao, observacao, dt_situacao, usuario FROM [dbo].[TREINA_PROPOSTAS] WHERE proposta= @proposta";
 
       E_Proposta retorno;
 
@@ -75,7 +79,9 @@ namespace Infrastructure.Repositories
 
     public async Task<E_Proposta> GetByCliente(string cpf)
     {
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_PROPOSTAS] WHERE cpf= @cpf";
+      // string sqlQuery = "SELECT * FROM [dbo].[TREINA_PROPOSTAS] WHERE cpf= @cpf";
+      string sqlQuery = "SELECT id_treina_proposta, proposta, cpf, conveniada, vlr_solicitado, prazo, vlr_financiado, " +
+                        "situacao, observacao, dt_situacao, usuario FROM [dbo].[TREINA_PROPOSTAS] WHERE cpf= @cpf";
 
       E_Proposta ret;
 
@@ -88,7 +94,9 @@ namespace Infrastructure.Repositories
 
     public async Task<IEnumerable<E_Proposta>> GetByUsuario(string usuario)
     {
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_PROPOSTAS] WHERE usuario = @usuario;";
+      // string sqlQuery = "SELECT * FROM [dbo].[TREINA_PROPOSTAS] WHERE usuario = @usuario;";
+      string sqlQuery = "SELECT id_treina_proposta, proposta, cpf, conveniada, vlr_solicitado, prazo, vlr_financiado, " +
+                        "situacao, observacao, dt_situacao, usuario FROM [dbo].[TREINA_PROPOSTAS] WHERE usuario= @usuario";
 
       IEnumerable<E_Proposta> retorno;
 
@@ -102,7 +110,6 @@ namespace Infrastructure.Repositories
       }
       return retorno;
     }
-
 
     public async Task<int> Update(E_Proposta obj)
     {

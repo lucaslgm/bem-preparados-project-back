@@ -45,7 +45,9 @@ namespace Infrastructure.Repositories
 
     public async Task<System.Collections.Generic.IEnumerable<E_Cliente>> Get()
     {
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_CLIENTES]";
+      string sqlQuery = "SELECT id_treina_cliente, cpf, nome, dt_nascimento, genero, vlr_salario, bairro, " +
+                        "cep, cidade, logradouro, numero_residencia " +
+                        "SELECT * FROM [dbo].[TREINA_CLIENTES]";
 
       IEnumerable<E_Cliente> ret;
 
@@ -55,24 +57,12 @@ namespace Infrastructure.Repositories
       }
       return ret;
     }
+
     async Task<E_Cliente> IR_Cliente.GetByCpf(string cpf)
     {
-      // string sqlQuery = "SELECT cli.Id_treina_cliente, cli.CPF, cli.NOME, cli.DT_NASCIMENTO, cli.GENERO, cli.VLR_SALARIO, cli.BAIRRO, " +
-      //                   "cli.CEP, cli.CIDADE, cli.LOGRADOURO, cli.NUMERO_RESIDENCIA, prop.PROPOSTA, prop.PRAZO, prop.CONVENIADA, " +
-      //                   "prop.VLR_FINANCIADO, prop.VLR_SOLICITADO, prop.SITUACAO, prop.OBSERVACAO, prop.DT_SITUACAO, prop.USUARIO " +
-      //                   "FROM treina_clientes cli LEFT JOIN treina_propostas prop ON cli.cpf = prop.cpf WHERE cpf= @cpf;";
-      // ret = await connection.QueryAsync<E_Cliente, E_Proposta, E_Cliente>(
-      //   sqlQuery,
-
-      //   (c, p) =>
-      //   {
-      //     c.Proposta = p;
-      //     return c;
-      //   },
-      //   splitOn: "Id_treina_cliente", new { cpf = cpf });
-
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_CLIENTES] WHERE cpf= @cpf";
-
+      string sqlQuery = "SELECT id_treina_cliente, cpf, nome, dt_nascimento, genero, vlr_salario, bairro, " +
+                        "cep, cidade, logradouro, numero_residencia " +
+                        "FROM [dbo].[TREINA_CLIENTES] WHERE cpf= @cpf";
       E_Cliente ret;
 
       using (var connection = new SqlConnection(base.GetConnection()))

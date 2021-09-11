@@ -29,7 +29,9 @@ namespace Infrastructure.Repositories
     #region WORKING
     public async Task<E_Usuario> Get(int id)
     {
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_USUARIOS] WHERE id_treina_usuario = @Id;";
+      // string sqlQuery = "SELECT * FROM [dbo].[TREINA_USUARIOS] WHERE id_treina_usuario = @Id;";
+      string sqlQuery = "SELECT id_treina_usuario, usuario, senha, nome, validade_senha " +
+                        "FROM [dbo].[TREINA_USUARIOS] WHERE id_treina_usuario = @Id;";
 
       E_Usuario ret;
 
@@ -41,7 +43,9 @@ namespace Infrastructure.Repositories
     }
     public async Task<IEnumerable<E_Usuario>> Get()
     {
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_USUARIOS]";
+      // string sqlQuery = "SELECT * FROM [dbo].[TREINA_USUARIOS]";
+      string sqlQuery = "SELECT id_treina_usuario, usuario, senha, nome, validade_senha " +
+                        "FROM [dbo].[TREINA_USUARIOS];";
 
       IEnumerable<E_Usuario> ret;
 
@@ -53,7 +57,9 @@ namespace Infrastructure.Repositories
     }
     public virtual async Task<E_Usuario> GetByUsername(string username)
     {
-      string sqlQuery = "SELECT * FROM [dbo].[TREINA_USUARIOS] WHERE usuario= @usuario";
+      // string sqlQuery = "SELECT * FROM [dbo].[TREINA_USUARIOS] WHERE usuario= @usuario";
+      string sqlQuery = "SELECT id_treina_usuario, usuario, senha, nome, validade_senha " +
+                        "FROM [dbo].[TREINA_USUARIOS] WHERE usuario = @usuario;";
 
       E_Usuario ret;
 
